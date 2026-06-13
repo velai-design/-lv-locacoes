@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade · Laysa Ventura</title>
+<meta name="description" content="Política de Privacidade da locação de equipamentos LV Estética Personalizada LTDA. Como tratamos seus dados em conformidade com a LGPD.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:           #FBF7F0;
+    --bg-2:         #F2EBDB;
+    --sage:         #B5A088;
+    --sage-deep:    #6E5B45;
+    --sage-darkest: #3E342A;
+    --cream:        #FAF6EC;
+    --gold:         #B49B6F;
+    --gold-soft:    #D4C29A;
+    --ink:          #2C2A26;
+    --ink-soft:     #5C5851;
+    --grey:         #8B8680;
+    --line:         #E0D2BB;
+    --line-dark:    #5A4A38;
+    --display:      'Cormorant Garamond', 'Times New Roman', serif;
+    --sans:         'Manrope', -apple-system, system-ui, sans-serif;
+    --gutter:       clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection { background: var(--sage-light, #DBC9B0); color: var(--sage-darkest); }
+
+  .wrap-narrow { max-width: 760px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* HEADER */
+  header.site {
+    background: rgba(251, 247, 240, 0.92);
+    padding: 1.3rem 0;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+  header.site .wrap-narrow {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  }
+  .brand {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--sage-darkest);
+    text-decoration: none;
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+  }
+  .brand-name { font-size: 1.4rem; letter-spacing: 0.01em; }
+  @media (min-width: 600px) { .brand-name { font-size: 1.5rem; } }
+  .brand-tag {
+    font-family: var(--sans);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--grey);
+    display: none;
+  }
+  @media (min-width: 600px) { .brand-tag { display: inline; } }
+  .header-back {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    color: var(--sage-darkest);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--sage);
+    transition: border-color 0.2s;
+  }
+  @media (min-width: 600px) { .header-back { font-size: 0.82rem; } }
+  .header-back:hover { border-bottom-color: var(--sage-deep); }
+
+  /* HERO */
+  .doc-hero {
+    padding: clamp(3rem, 8vw, 5rem) 0 clamp(2.5rem, 6vw, 4rem);
+    text-align: left;
+  }
+  .doc-hero .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    margin: 0 0 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .doc-hero .eyebrow::before {
+    content: ''; width: 30px; height: 1px; background: var(--sage);
+  }
+  .doc-hero h1 {
+    font-family: var(--display);
+    font-weight: 300;
+    color: var(--sage-darkest);
+    font-size: clamp(2rem, 5.5vw, 3.4rem);
+    line-height: 1.08;
+    margin: 0 0 1.2rem;
+    letter-spacing: -0.005em;
+  }
+  .doc-hero .lede {
+    font-family: var(--sans);
+    font-size: clamp(0.98rem, 1.4vw, 1.08rem);
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-width: 56ch;
+    font-weight: 300;
+  }
+  .doc-hero .updated {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--grey);
+    letter-spacing: 0.04em;
+  }
+
+  /* CONTEÚDO */
+  .doc-body {
+    padding-bottom: clamp(4rem, 9vw, 7rem);
+  }
+  .doc-section {
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .doc-section:first-of-type { border-top: 0; padding-top: 0; }
+  .doc-section h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--sage-darkest);
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    line-height: 1.2;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+  }
+  .doc-section h2 .num {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 0.7em;
+    color: var(--gold);
+    font-weight: 400;
+    flex-shrink: 0;
+    min-width: 2.2rem;
+  }
+  .doc-section p, .doc-section li {
+    font-size: 0.99rem;
+    color: var(--ink);
+    line-height: 1.78;
+    margin: 0 0 1.1em;
+  }
+  .doc-section ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0 0 1.4em;
+  }
+  .doc-section ul li {
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.6em;
+  }
+  .doc-section ul li::before {
+    content: '·';
+    position: absolute;
+    left: 0.4rem;
+    top: 0;
+    color: var(--sage);
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  .doc-section a {
+    color: var(--sage-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--sage);
+    transition: text-decoration-color 0.2s;
+  }
+  .doc-section a:hover { text-decoration-color: var(--sage-deep); }
+  .doc-section strong {
+    font-weight: 500;
+    color: var(--sage-darkest);
+  }
+
+  /* INFO BOX — destaque pra dados do controlador */
+  .info-box {
+    margin: 1.5rem 0 0;
+    padding: 1.4rem 1.5rem;
+    background: var(--bg-2);
+    border-left: 2px solid var(--sage-deep);
+  }
+  .info-box dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem 1.5rem;
+  }
+  @media (min-width: 540px) {
+    .info-box dl { grid-template-columns: auto 1fr; }
+  }
+  .info-box dt {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    font-weight: 500;
+    margin: 0;
+  }
+  .info-box dd {
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 0.96rem;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  @media (max-width: 539px) {
+    .info-box dd { margin-bottom: 0.4rem; }
+  }
+
+  /* RODAPÉ */
+  footer.site {
+    background: var(--sage-darkest);
+    color: var(--cream);
+    padding: 3rem 0 1.8rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2.4rem;
+  }
+  @media (min-width: 600px) {
+    .footer-grid { grid-template-columns: 1.4fr 1fr; }
+  }
+  .footer-brand {
+    font-family: var(--display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.05;
+    margin-bottom: 0.7rem;
+  }
+  .footer-brand .italic {
+    font-family: var(--display);
+    font-style: italic;
+    color: var(--gold-soft);
+  }
+  .footer-tag {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250, 246, 236, 0.55);
+  }
+  .footer-back {
+    padding: 1.3rem 1.7rem;
+    background: rgba(250, 246, 236, 0.06);
+    border: 1px solid var(--line-dark);
+    color: var(--cream);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    transition: all 0.25s;
+  }
+  .footer-back:hover {
+    background: rgba(250, 246, 236, 0.12);
+    border-color: var(--gold-soft);
+  }
+  .footer-back .label {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+  }
+  .footer-back .value {
+    font-family: var(--display);
+    font-size: 1.3rem;
+    color: var(--cream);
+  }
+  .footer-bottom {
+    padding-top: 1.7rem;
+    border-top: 1px solid var(--line-dark);
+    font-size: 0.76rem;
+    color: rgba(250, 246, 236, 0.45);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    letter-spacing: 0.04em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 3px;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="wrap-narrow">
+    <a href="index.html" class="brand">
+      <span class="brand-name">Laysa Ventura</span>
+      <span class="brand-tag">Locação</span>
+    </a>
+    <a href="index.html" class="header-back">← Voltar à página</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="doc-hero">
+  <div class="wrap-narrow">
+    <p class="eyebrow">LGPD · Lei 13.709/2018</p>
+    <h1>Política de Privacidade.</h1>
+    <p class="lede">
+      Esta página explica quais dados coletamos, para que usamos, por quanto tempo guardamos e como você pode exercer seus direitos sobre eles. Leitura direta, sem juridiquês.
+    </p>
+    <p class="updated">Vigência: maio de 2026</p>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<div class="doc-body">
+  <div class="wrap-narrow">
+
+    <div class="doc-section">
+      <h2><span class="num">01</span>Quem é o responsável</h2>
+      <p>
+        O responsável pelo tratamento dos seus dados pessoais é a empresa identificada abaixo. É com ela que você fala em qualquer questão envolvendo os dados que compartilhou conosco.
+      </p>
+      <div class="info-box">
+        <dl>
+          <dt>Razão social</dt>
+          <dd>LV Estética Personalizada LTDA</dd>
+          <dt>CNPJ</dt>
+          <dd>23.281.826/0001-71</dd>
+          <dt>Contato</dt>
+          <dd><a href="mailto:esteticalaysaventura@gmail.com">esteticalaysaventura@gmail.com</a></dd>
+        </dl>
+      </div>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">02</span>Quais dados coletamos</h2>
+      <p>
+        Coletamos apenas os dados que você preenche voluntariamente no formulário de solicitação de orçamento. Nenhum dado é coletado sem o seu consentimento explícito ao enviar o formulário.
+      </p>
+      <ul>
+        <li>Nome completo</li>
+        <li>Número de WhatsApp</li>
+        <li>Cidade e estado de localização</li>
+        <li>Pacote de locação de interesse</li>
+        <li>Interesse complementar em outros equipamentos disponíveis</li>
+        <li>Data e horário do envio do formulário</li>
+      </ul>
+      <p>
+        Não coletamos CPF, endereço completo, dados bancários, fotografias ou qualquer informação sensível.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">03</span>Para que usamos</h2>
+      <p>
+        Os dados são usados exclusivamente para os seguintes fins:
+      </p>
+      <ul>
+        <li>Responder ao seu pedido de orçamento pelo WhatsApp informado</li>
+        <li>Enviar valores, condições e disponibilidade de locação para a sua cidade</li>
+        <li>Fazer follow-up comercial quando aplicável e dentro do prazo de relacionamento</li>
+        <li>Cumprir obrigações legais e fiscais relacionadas à prestação de serviço</li>
+      </ul>
+      <p>
+        <strong>Não vendemos, não compartilhamos com terceiros para fins comerciais, nem enviamos spam.</strong>
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">04</span>Base legal</h2>
+      <p>
+        O tratamento dos seus dados é realizado com base no seu <strong>consentimento livre, informado e inequívoco</strong>, manifestado no momento em que você preenche e envia o formulário, conforme o artigo 7º, inciso I, da LGPD.
+      </p>
+      <p>
+        Para a eventual continuidade de relacionamento comercial, podemos também nos basear na <strong>execução de procedimentos preliminares relacionados a contrato</strong>, conforme o artigo 7º, inciso V, da LGPD.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">05</span>Onde armazenamos</h2>
+      <p>
+        Os dados ficam armazenados em planilha eletrônica hospedada no Google Workspace, em conta privada de acesso restrito aos responsáveis pelo atendimento. O Google atua como operador de tratamento, sujeito às próprias políticas de segurança e privacidade.
+      </p>
+      <p>
+        O envio inicial do formulário pode passar por serviços técnicos de processamento automatizado, todos contratados sob normas de privacidade compatíveis com a LGPD.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">06</span>Por quanto tempo guardamos</h2>
+      <p>
+        Os dados são mantidos pelo prazo de <strong>12 meses contados a partir do último contato</strong> ativo entre as partes. Após esse prazo, os dados são excluídos das nossas bases, exceto quando houver obrigação legal de retenção por prazo superior.
+      </p>
+      <p>
+        Você pode solicitar a exclusão antecipada a qualquer momento, conforme descrito no item 8 abaixo.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">07</span>Compartilhamento</h2>
+      <p>
+        Seus dados podem ser compartilhados apenas nas seguintes hipóteses:
+      </p>
+      <ul>
+        <li>Com prestadores de serviço técnico necessários para a operação do formulário e armazenamento (Google, WhatsApp), todos sujeitos às próprias políticas de privacidade</li>
+        <li>Quando exigido por autoridade pública competente, mediante ordem judicial ou requisição formal</li>
+        <li>Para o cumprimento de obrigações legais e regulatórias</li>
+      </ul>
+      <p>
+        Em nenhuma hipótese seus dados são vendidos, alugados ou cedidos para terceiros com finalidade comercial ou publicitária.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">08</span>Seus direitos</h2>
+      <p>
+        Como titular dos dados, a LGPD garante a você o direito de:
+      </p>
+      <ul>
+        <li>Confirmar a existência de tratamento dos seus dados</li>
+        <li>Acessar os dados que mantemos sobre você</li>
+        <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+        <li>Solicitar a exclusão dos dados</li>
+        <li>Solicitar a portabilidade dos dados</li>
+        <li>Revogar o consentimento a qualquer momento</li>
+        <li>Ser informado sobre compartilhamentos realizados</li>
+      </ul>
+      <p>
+        Para exercer qualquer um desses direitos, basta enviar uma solicitação por email para <a href="mailto:esteticalaysaventura@gmail.com">esteticalaysaventura@gmail.com</a> com a descrição do pedido. Respondemos em até 15 dias úteis.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">09</span>Segurança</h2>
+      <p>
+        Adotamos medidas técnicas e organizacionais razoáveis para proteger seus dados contra acesso não autorizado, perda acidental, alteração indevida ou divulgação. Apesar disso, nenhuma transmissão pela internet ou método de armazenamento é completamente seguro, e não podemos garantir segurança absoluta.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">10</span>Cookies</h2>
+      <p>
+        Esta página não utiliza cookies próprios para rastreamento de comportamento ou publicidade. Cookies técnicos essenciais ao funcionamento básico do navegador podem ser usados.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">11</span>Alterações</h2>
+      <p>
+        Esta política pode ser atualizada periodicamente para refletir mudanças operacionais ou legais. A versão vigente é sempre a publicada nesta página, com a data de atualização indicada no topo.
+      </p>
+    </div>
+
+    <div class="doc-section">
+      <h2><span class="num">12</span>Contato</h2>
+      <p>
+        Para dúvidas, reclamações ou pedidos relativos a esta política, escreva para <a href="mailto:esteticalaysaventura@gmail.com">esteticalaysaventura@gmail.com</a>.
+      </p>
+      <p>
+        Você também pode procurar a <a href="https://www.gov.br/anpd/" target="_blank" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a> caso entenda que seus direitos não foram respeitados.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer class="site">
+  <div class="wrap-narrow">
+
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Laysa <span class="italic">Ventura.</span></div>
+        <p class="footer-tag">Locação de Equipamento · Nova Andradina, MS</p>
+      </div>
+
+      <a href="index.html" class="footer-back">
+        <span class="label">Voltar pra</span>
+        <span class="value">Página principal →</span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 LV Estética Personalizada LTDA</span>
+      <span>CNPJ 23.281.826/0001-71</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
