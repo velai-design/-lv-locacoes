@@ -3,419 +3,532 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LV Locações · Locação de Depilação a LED</title>
-<meta name="description" content="Alugue o equipamento profissional de depilação a LED (Zyon Pro Cromatic). Entregue, montado e pronto pra atender. Nova Andradina e Dourados.">
+<title>LV Locações · Locação de LED</title>
+<meta name="description" content="Alugue o equipamento profissional de depilação a LED. Entregue, montado e pronto pra atender.">
 
-<!-- Cartao de compartilhamento (preview do link no WhatsApp/Instagram/etc) -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="LV Locações · Locação de Depilação a LED">
+<meta property="og:title" content="LV Locações · Locação de LED">
 <meta property="og:description" content="Alugue o equipamento profissional de depilação a LED. Entregue, montado e pronto pra atender.">
-<meta property="og:image" content="https://velai-design.github.io/lv-locacoes/og-card.jpg">
 <meta property="og:url" content="https://velai-design.github.io/lv-locacoes/">
+<meta property="og:image" content="https://velai-design.github.io/lv-locacoes/og-card.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://velai-design.github.io/lv-locacoes/og-card.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- LANDING v15 · product-forward / B2B: aparelho+oferta no topo, ROI (alugar vs comprar), menos animacao/vidro, captura mantida -->
 <style>
-  :root{
-    --bg:#FBF7F0; --bg-2:#F4EEE2; --line:#E5DAC4;
-    --ink:#2C2A26; --muted:#6E6A62;
-    --sage:#6E5B45; --gold:#7E6834; --gold-soft:#B49B6F;
-    --dark:#3E342A; --btn:#4A3D2E; --cream:#FAF6EC;
-    --sans:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
-    --wrap:1080px; --r:16px;
+  :root {
+    /* HARMONIA DE TEMPERATURA (Fim do desconforto visual) */
+    --bg-base: #EBE5D9;       /* Areia suave, super confortável para leitura */
+    --surface: #F8F5F0;       /* Creme claro para os cartões (NÃO é branco puro) */
+    --surface-alt: #E1DACD;   /* Tom de transição sutil */
+    
+    --ink-heavy: #2C2A26;     /* Marrom quase preto (menos duro aos olhos que o preto absoluto) */
+    --ink-light: #6E6A62;     /* Texto de apoio elegante */
+    
+    --accent: #7E6834;        /* Dourado escuro / Mostarda */
+    --sage-darkest: #3E342A;  /* Chumbo terroso */
+    
+    /* CTA EXTREMAMENTE CHAMATIVO E ELEGANTE */
+    --cta-bg: #A84B27;        /* Terracota Vibrante */
+    --cta-hover: #8C3C1D;
+    --cta-shadow: rgba(168, 75, 39, 0.35); /* Brilho projetado do botão */
+    
+    --sans: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    --radius-lg: 32px;
+    --radius-md: 20px;
+    --shadow-soft: 0 20px 40px rgba(62, 52, 42, 0.05);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:80px}
-  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;display:block}
-  a{color:inherit}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
-  .eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-  .eyebrow.center{display:block;text-align:center}
-  h1{font-size:clamp(2rem,6vw,3.1rem);font-weight:800;line-height:1.08;letter-spacing:-.02em}
-  h2{font-size:clamp(1.6rem,4.2vw,2.3rem);font-weight:800;line-height:1.12;letter-spacing:-.015em}
-  h3{font-size:1.12rem;font-weight:700}
-  p{color:var(--muted)}
-  strong{color:var(--ink);font-weight:700}
-  section{padding:clamp(3.4rem,8vw,5.5rem) 0}
 
-  /* botao primario */
-  .pill-btn.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;
-    background:var(--btn);color:#fff;border:none;border-radius:999px;cursor:pointer;
-    font-family:var(--sans);font-size:1.04rem;font-weight:700;padding:17px 30px;
-    text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-    box-shadow:0 8px 22px rgba(62,52,42,.18)}
-  .pill-btn.cta:hover{transform:translateY(-2px);background:#3b3025;box-shadow:0 12px 28px rgba(62,52,42,.26)}
-  .pill-btn.cta .arrow{transition:transform .18s ease}
-  .pill-btn.cta:hover .arrow{transform:translateX(4px)}
-
-  /* header */
-  header.site{position:sticky;top:0;z-index:50;background:rgba(251,247,240,.9);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
-  header.site .wrap{display:flex;justify-content:center;align-items:center;height:60px}
-  .brand{font-weight:800;letter-spacing:-.01em;font-size:1.18rem}
-
-  /* hero */
-  .hero{padding-top:clamp(2.4rem,6vw,4rem)}
-  .hero-grid{display:grid;gap:34px;align-items:center}
-  .hero h1{margin-bottom:18px}
-  .hero .sub{font-size:1.1rem;max-width:34ch;margin-bottom:22px}
-  .hero-bullets{list-style:none;margin:0 0 26px;display:grid;gap:11px}
-  .hero-bullets li{position:relative;padding-left:30px;font-weight:600;color:var(--ink)}
-  .hero-bullets li::before{content:"";position:absolute;left:0;top:7px;width:18px;height:18px;border-radius:50%;
-    background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat}
-  .hero-trust{font-size:.9rem;margin-top:18px;color:var(--muted)}
-  .hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r);box-shadow:0 20px 50px rgba(62,52,42,.16)}
-
-  /* faixa de credibilidade */
-  .strip{background:var(--bg-2);border-block:1px solid var(--line);padding:26px 0}
-  .strip-row{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 26px}
-  .strip-row div{display:flex;flex-direction:column}
-  .strip-row strong{font-size:.98rem}
-  .strip-row span{font-size:.86rem;color:var(--muted)}
-
-  /* por que alugar */
-  .why h2.center{text-align:center;max-width:18ch;margin:0 auto 36px}
-  .why-grid{display:grid;gap:18px;grid-template-columns:1fr}
-  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px}
-  .card h3{margin-bottom:9px}
-  .card p{font-size:.96rem}
-
-  /* incluso + quem entrega (2 col com imagem) */
-  .split{display:grid;gap:34px;align-items:center}
-  .split img{width:100%;border-radius:var(--r);box-shadow:0 16px 40px rgba(62,52,42,.14)}
-  .split .media-wide img{aspect-ratio:4/3;object-fit:cover}
-  .split .media-tall img{aspect-ratio:4/5;object-fit:cover}
-  ul.check{list-style:none;margin-top:18px;display:grid;gap:12px}
-  ul.check li{position:relative;padding-left:30px;color:var(--ink)}
-  ul.check li::before{content:"";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;
-    background:var(--sage) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/11px no-repeat}
-  .crio-note{margin-top:18px;font-size:.95rem}
-  .crio-link{color:var(--gold);font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-
-  /* depoimento */
-  .testimonial{background:var(--dark);color:var(--cream)}
-  .testimonial .wrap{max-width:760px;text-align:center}
-  .testimonial blockquote{font-size:clamp(1.15rem,2.6vw,1.5rem);font-weight:600;line-height:1.4;letter-spacing:-.01em}
-  .testimonial cite{display:block;margin-top:20px;font-style:normal;font-size:.92rem;color:var(--gold-soft);font-weight:700}
-
-  /* faq */
-  .faq .wrap{max-width:760px}
-  .faq h2{text-align:center;margin-bottom:30px}
-  details{border-bottom:1px solid var(--line);padding:18px 0}
-  summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:var(--ink)}
-  summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";font-size:1.5rem;color:var(--gold);font-weight:400;transition:transform .2s ease}
-  details[open] summary::after{transform:rotate(45deg)}
-  details p{margin-top:12px;font-size:.97rem}
-
-  /* form */
-  .form-section{background:var(--bg-2);border-top:1px solid var(--line)}
-  .wrap-narrow{max-width:600px;margin:0 auto;padding:0 22px}
-  .text-center-block{text-align:center;margin-bottom:30px}
-  .lede{font-size:1.05rem;margin-top:8px}
-  .form-wrap{display:grid;gap:16px}
-  .field{display:flex;flex-direction:column}
-  .field-label{font-size:.82rem;font-weight:700;color:var(--sage);margin-bottom:9px;letter-spacing:.02em}
-  .apple-input{font-family:var(--sans);font-size:1rem;padding:15px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%;transition:border-color .15s ease,box-shadow .15s ease}
-  .apple-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(126,104,52,.14)}
-  .apple-input::placeholder{color:#9a948a}
-  .form-grid.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .pill-select{display:flex;flex-wrap:wrap;gap:9px}
-  .pill-opt{font-family:var(--sans);font-size:.93rem;font-weight:600;padding:11px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer;transition:all .15s ease}
-  .pill-opt:hover{border-color:var(--gold-soft)}
-  .pill-opt.active{background:var(--btn);color:#fff;border-color:var(--btn)}
-  .checkbox-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px;cursor:pointer}
-  .checkbox-item input{margin-top:3px;width:18px;height:18px;accent-color:var(--gold);flex:0 0 auto}
-  .checkbox-label{font-weight:600;font-size:.96rem;color:var(--ink)}
-  .checkbox-label small{display:block;font-weight:500;color:var(--muted);margin-top:2px}
-  .form-msg{font-size:.95rem;text-align:center;min-height:1.2em}
-  .form-msg.error{color:#9b2c2c}
-  .form-msg.success{color:var(--sage)}
-
-  /* footer */
-  footer.site{background:var(--dark);color:rgba(250,246,236,.7);padding:44px 0;text-align:center}
-  .footer-brand{font-weight:800;color:var(--cream);font-size:1.15rem;margin-bottom:6px}
-  .footer-bottom{margin-top:18px;font-size:.84rem}
-  footer.site a{color:var(--gold-soft);text-decoration:underline}
-
-  /* CTA flutuante */
-  .floating-cta{position:fixed;left:50%;transform:translateX(-50%) translateY(140%);bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;
-    display:inline-flex;align-items:center;gap:9px;background:var(--btn);color:#fff;border-radius:999px;
-    padding:15px 26px;font-weight:700;font-size:1rem;text-decoration:none;box-shadow:0 12px 30px rgba(62,52,42,.3);
-    opacity:0;transition:transform .3s cubic-bezier(.2,.8,.2,1),opacity .3s ease}
-  .floating-cta.show{transform:translateX(-50%) translateY(0);opacity:1}
-  .floating-cta .arrow{transition:transform .18s ease}
-  .floating-cta:hover .arrow{transform:translateX(4px)}
-
-  /* reveal */
-  .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-  .rv.in{opacity:1;transform:none}
-
-  @media (max-width:820px){
-    .hero-media{order:-1}
-    .hero-media img{aspect-ratio:5/4;max-height:340px}
-    .hero .sub{max-width:none}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg-base);
+    color: var(--ink-heavy);
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  @media (min-width:721px){ .strip-row{grid-template-columns:repeat(4,1fr)} }
-  @media (min-width:821px){
-    .hero-grid{grid-template-columns:1.05fr .95fr}
-    .why-grid{grid-template-columns:repeat(3,1fr)}
-    .split{grid-template-columns:1fr 1fr}
-    .split.flip .media-wide,.split.flip .media-tall{order:2}
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  section { padding: clamp(3.25rem, 9vw, 9rem) 0; }
+
+  /* TIPOGRAFIA MASSIVA */
+  .headline {
+    font-size: clamp(2.5rem, 7.5vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--ink-heavy);
+    margin-bottom: 0.3em;
   }
-  @media (prefers-reduced-motion:reduce){
-    *{scroll-behavior:auto}
-    .rv{opacity:1;transform:none;transition:none}
-    .pill-btn.cta,.floating-cta{transition:none}
+  .subhead {
+    font-size: clamp(1.7rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5em;
   }
+  .lede {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    color: var(--ink-light);
+    font-weight: 500;
+    max-width: 45ch;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  /* HEADER GLASSMORPHISM */
+  header {
+    position: fixed;
+    top: 0; width: 100%; z-index: 100;
+    background: rgba(235, 229, 217, 0.85); /* Fundo com vidro fosco */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(248, 245, 240, 0.5);
+  }
+  header .container { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.02em; color: var(--ink-heavy); }
+  .header-btn {
+    background: var(--surface);
+    color: var(--ink-heavy);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(62, 52, 42, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .header-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(62, 52, 42, 0.1); }
+
+  /* BOTÃO DE CTA PRINCIPAL (Terracota com Sombra Projetada) */
+  .pill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cta-bg);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 22px 46px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 12px 28px var(--cta-shadow);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s, background 0.3s;
+  }
+  .pill-btn:hover {
+    background: var(--cta-hover);
+    transform: scale(1.03);
+    box-shadow: 0 16px 36px var(--cta-shadow);
+  }
+
+  /* BENTO GRID UI */
+  .bento-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 768px) {
+    .bento-grid.two-cols { grid-template-columns: 1fr 1fr; }
+    .bento-grid.three-cols { grid-template-columns: repeat(3, 1fr); }
+  }
+  .bento-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: clamp(2.5rem, 5vw, 4rem);
+    box-shadow: var(--shadow-soft);
+    display: flex; flex-direction: column; justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  .bento-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 25px 50px rgba(62, 52, 42, 0.08); 
+  }
+  .bento-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+  .bento-card p { font-size: 1.05rem; color: var(--ink-light); font-weight: 500; }
+  
+  .img-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .img-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* HERO SECTION */
+  .hero {
+    min-height: auto;
+    padding-top: clamp(6rem, 13vw, 11rem);
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .hero .lede { margin: 1rem auto 3rem; }
+  .hero-media { width: 100%; max-width: 900px; margin-top: clamp(2rem, 5vw, 4rem); }
+
+  /* NUMBERS STRIP */
+  .numbers-grid { text-align: center; }
+  .num-val { font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 800; color: var(--ink-heavy); letter-spacing: -0.04em; line-height: 1; margin-bottom: 0.5rem; display: block; }
+  .num-lbl { font-size: 0.95rem; font-weight: 700; color: var(--ink-light); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* SPLIT SECTIONS */
+  .split { display: grid; gap: 4rem; align-items: center; }
+  @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; gap: 6rem; } }
+
+  /* CENTER BLOCKS */
+  .center-text { text-align: center; display: flex; flex-direction: column; align-items: center; margin-bottom: 4rem; }
+  .center-text .lede { margin: 0 auto; }
+
+  /* FAQ */
+  .faq details { background: var(--surface); border-radius: var(--radius-md); margin-bottom: 16px; box-shadow: var(--shadow-soft); border: 1px solid rgba(255, 255, 255, 0.3); }
+  .faq summary {
+    font-size: 1.2rem; font-weight: 700; padding: 24px 32px; cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; letter-spacing: -0.01em;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: '+'; font-size: 1.8rem; color: var(--accent); transition: transform 0.3s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq p { padding: 0 32px 32px; color: var(--ink-light); font-size: 1.05rem; font-weight: 500; }
+
+  /* FORMS */
+  .form-wrap {
+    background: var(--surface);
+    padding: clamp(2.5rem, 6vw, 4rem);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .field { margin-bottom: 24px; }
+  .apple-input {
+    width: 100%;
+    background: var(--bg-base);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 18px 24px;
+    font-size: 1.1rem;
+    font-family: var(--sans);
+    font-weight: 600;
+    color: var(--ink-heavy);
+    transition: all 0.3s;
+    outline: none;
+  }
+  .apple-input::placeholder { color: #A8A398; font-weight: 500; }
+  .apple-input:focus { border-color: var(--accent); background: var(--surface); }
+  
+  .checkbox-item {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--bg-base); padding: 20px; border-radius: 16px; cursor: pointer;
+    margin: 32px 0; border: 2px solid transparent; transition: border 0.3s;
+  }
+  .checkbox-item:hover { border-color: rgba(126, 104, 52, 0.2); }
+  .checkbox-item input { width: 22px; height: 22px; accent-color: var(--cta-bg); }
+  .checkbox-label { font-weight: 700; font-size: 1.05rem; }
+  .checkbox-label small { display: block; font-weight: 500; color: var(--ink-light); margin-top: 4px; font-size: 0.9rem; }
+
+  /* FOOTER */
+  footer { background: var(--ink-heavy); color: #F5F5F7; padding: 6rem 0 3rem; text-align: center; }
+  .footer-brand { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1rem; color: #fff; }
+  .footer-bottom { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; color: rgba(255,255,255,0.5); font-weight: 500; }
+
+  /* CTA FLUTUANTE (terracota, combinando com o botao principal) */
+  .floating-cta {
+    position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom));
+    transform: translateX(-50%) translateY(170%);
+    z-index: 90; display: inline-flex; align-items: center; gap: 8px;
+    background: var(--cta-bg); color: #fff; font-weight: 700; font-size: 1rem;
+    padding: 16px 30px; border-radius: 60px; text-decoration: none;
+    box-shadow: 0 14px 32px var(--cta-shadow);
+    opacity: 0; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.35s;
+  }
+  .floating-cta:hover { background: var(--cta-hover); }
+  .floating-cta.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+  /* MENSAGEM DO FORM */
+  .form-msg { text-align: center; font-size: 0.95rem; font-weight: 600; margin-top: 16px; min-height: 1.2em; }
+  .form-msg.error { color: #9b2c2c; }
+  .form-msg.success { color: var(--accent); }
+
+  /* REVEAL ANIMATIONS */
+  .rv { opacity: 0; transform: translateY(30px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .rv.in { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
 
 <header class="site">
-  <div class="wrap"><span class="brand">LV Locações</span></div>
+  <div class="container">
+    <a href="#" class="brand">LV Locações</a>
+    <a href="#orcamento" class="header-btn">Orçamento</a>
+  </div>
 </header>
 
-<!-- HERO: aparelho + oferta + CTA, tudo acima da dobra -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text rv">
-      <span class="eyebrow">Locação de equipamento profissional</span>
-      <h1>Atenda com depilação a LED sem comprar o aparelho.</h1>
-      <p class="sub">A gente entrega o <strong>Zyon Pro Cromatic</strong> montado e pronto pra uso. Você aluga pelo tempo que precisar, atende suas clientes e devolve quando terminar.</p>
-      <ul class="hero-bullets">
-        <li>Entregue e montado na sua cidade</li>
-        <li>Orientação de uso e suporte inclusos</li>
-        <li>Você paga pelo uso, não pela compra</li>
-      </ul>
-      <a href="#orcamento" class="pill-btn cta"><span class="lbl"><span class="lbl-text">Quero meu orçamento</span></span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-      <p class="hero-trust">Equipamento profissional já usado por clínicas de estética no MS.</p>
-    </div>
-    <div class="hero-media rv" style="transition-delay:.1s">
-      <img src="laysa-zyon.jpg" alt="Aplicação de depilação a LED com o aparelho Zyon Pro Cromatic" width="900" height="1125">
-    </div>
-  </div>
-</section>
-
-<!-- faixa de credibilidade -->
-<section class="strip" style="padding:26px 0">
-  <div class="wrap strip-row">
-    <div><strong>Entrega + montagem</strong><span>na sua cidade</span></div>
-    <div><strong>Suporte incluso</strong><span>orientação de uso</span></div>
-    <div><strong>Sem comprar</strong><span>alugue por período</span></div>
-    <div><strong>LED + Crio</strong><span>opção de resfriamento</span></div>
-  </div>
-</section>
-
-<!-- POR QUE ALUGAR (ROI) -->
-<section class="why">
-  <div class="wrap">
-    <span class="eyebrow center">Por que alugar</span>
-    <h2 class="center">Comprar descapitaliza. Alugar te faz atender agora.</h2>
-    <div class="why-grid">
-      <div class="card rv"><h3>Sem investir alto</h3><p>Um aparelho profissional de LED custa caro. Alugando, você atende com o mesmo equipamento pagando só pelo período de uso.</p></div>
-      <div class="card rv" style="transition-delay:.08s"><h3>Comece a faturar antes</h3><p>Você não espera juntar pra comprar. Recebe o aparelho montado e já agenda suas clientes.</p></div>
-      <div class="card rv" style="transition-delay:.16s"><h3>Sem risco parado</h3><p>Atendeu a demanda, devolveu. Ideal pra começar, cobrir alta temporada ou testar antes de investir na compra.</p></div>
-    </div>
-    <!-- ANCORA DE PRECO entra aqui assim que o modelo de cobranca/valor for definido -->
-  </div>
-</section>
-
-<!-- O QUE ESTA INCLUSO -->
-<section style="background:var(--bg-2);border-block:1px solid var(--line)">
-  <div class="wrap split">
+  <div class="container">
     <div class="rv">
-      <span class="eyebrow">O que está incluso</span>
-      <h2>Você recebe pronto pra atender.</h2>
-      <ul class="check">
-        <li>O equipamento <strong>Zyon Pro Cromatic</strong> (depilação a LED)</li>
-        <li>Entrega e <strong>montagem</strong> na sua cidade</li>
-        <li><strong>Orientação de uso</strong> pra você operar com segurança</li>
-        <li>Suporte durante todo o período de locação</li>
-        <li>Busca do equipamento quando você terminar</li>
-        <li>Opção de adicionar o módulo <strong>Crio</strong> (resfriamento)</li>
-      </ul>
+      <span class="eyebrow">Equipamento Profissional</span>
+      <h1 class="headline">Depilação a LED.</h1>
+      <p class="lede">Zyon Pro Cromatic. Entregue e montado na sua clínica. Fature sem precisar comprar o aparelho.</p>
+      <a href="#orcamento" class="pill-btn">Solicitar Orçamento</a>
     </div>
-    <div class="rv media-wide" style="transition-delay:.1s">
-      <img src="zyon-pro-oficial.jpg" alt="Equipamento de depilação a LED Zyon Pro Cromatic">
+    <div class="hero-media img-frame rv" style="transition-delay: 0.1s;">
+      <img src="laysa-zyon.jpg" alt="Aparelho Zyon Pro Cromatic" style="aspect-ratio: 16/9;">
     </div>
   </div>
 </section>
 
-<!-- CRIO (add-on) -->
+<section style="padding: 0 0 6rem 0;">
+  <div class="container">
+    <div class="bento-grid three-cols numbers-grid rv">
+      <div class="bento-card" style="padding: 2rem;"><span class="num-val">100%</span><span class="num-lbl">Entrega e Montagem</span></div>
+      <div class="bento-card" style="padding: 2rem;"><span class="num-val">Zero</span><span class="num-lbl">Custo de Manutenção</span></div>
+      <div class="bento-card" style="padding: 2rem;"><span class="num-val">MS</span><span class="num-lbl">Nova Andradina e Dourados</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-alt);">
+  <div class="container">
+    <div class="center-text rv">
+      <span class="eyebrow">Inteligência Financeira</span>
+      <h2 class="subhead">Comprar descapitaliza.</h2>
+      <p class="lede">Alugar coloca a tecnologia na sua clínica imediatamente.</p>
+    </div>
+    <div class="bento-grid three-cols rv">
+      <div class="bento-card">
+        <h3>Sem investir alto</h3>
+        <p>Você atende com um equipamento premium pagando apenas pelo tempo de uso.</p>
+      </div>
+      <div class="bento-card">
+        <h3>Fature antes</h3>
+        <p>Não espere juntar o valor da máquina. Agende as clientes e lucre na mesma semana.</p>
+      </div>
+      <div class="bento-card">
+        <h3>Zero risco</h3>
+        <p>Atendeu a demanda. Devolveu. O modelo perfeito para testar antes de comprar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section>
-  <div class="wrap split flip">
-    <div class="rv media-tall">
-      <img src="laysa-crio.jpg" alt="Módulo de resfriamento Crio em uso">
+  <div class="container split">
+    <div class="rv">
+      <span class="eyebrow">Ecossistema</span>
+      <h2 class="subhead">Tudo pronto.<br>Só atender.</h2>
+      <p class="lede">A logística é nossa. O equipamento chega testado e instalado no seu endereço. Quando a sua agenda termina, nós recolhemos.</p>
+      <div class="bento-grid" style="margin-top: 2rem;">
+        <div class="bento-card" style="padding: 2rem;">
+          <h3>Orientação e Suporte</h3>
+          <p>Instruções claras de uso na entrega e linha direta via WhatsApp o tempo todo.</p>
+        </div>
+      </div>
     </div>
-    <div class="rv" style="transition-delay:.1s">
-      <span class="eyebrow">Módulo opcional</span>
-      <h2>Quer incluir a Crio?</h2>
-      <p style="margin-top:14px">Além da depilação a LED, você pode adicionar o módulo de resfriamento no mesmo orçamento. Sem compromisso — só pra você avaliar o valor com tudo junto.</p>
-      <p class="crio-note">No formulário, é só marcar <span class="crio-link js-crio-cta">“adicionar módulo Crio”</span> que eu já mando o orçamento unificado.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DEPOIMENTO -->
-<section class="testimonial">
-  <div class="wrap">
-    <span class="eyebrow center" style="color:var(--gold-soft)">Quem já usou</span>
-    <blockquote>“Equipamento de qualidade e entrega sem dor de cabeça. Deu pra atender minhas clientes com tranquilidade e o suporte foi presente do início ao fim.”</blockquote>
-    <cite>Vandresa Falavigna · Viva Mais Clínica de Estética (MS)</cite>
-  </div>
-</section>
-
-<!-- QUEM ENTREGA (Laysa como prova, nao como protagonista) -->
-<section>
-  <div class="wrap split">
-    <div class="rv media-tall">
-      <img src="laysa-hero.jpg" alt="Laysa Ventura, responsável pela LV Estética">
-    </div>
-    <div class="rv" style="transition-delay:.1s">
-      <span class="eyebrow">Quem entrega</span>
-      <h2>LV Estética Personalizada</h2>
-      <p style="margin-top:14px">Quem cuida da locação é a <strong>Laysa Ventura</strong>, da LV Estética, em Nova Andradina (MS). Equipamento profissional entregue por quem trabalha com estética e sabe o que você precisa pra atender bem.</p>
+    <div class="img-frame rv" style="transition-delay: 0.1s;">
+      <img src="zyon-pro-oficial.jpg" alt="Equipamento de LED" style="aspect-ratio: 4/5;">
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<section style="padding-top: 0;">
+  <div class="container rv">
+    <div class="bento-card" style="background: var(--surface); align-items: center; text-align: center; padding: clamp(3rem, 8vw, 6rem);">
+      <span class="eyebrow">Módulo Opcional</span>
+      <h2 class="subhead">Quer incluir a Crio?</h2>
+      <p class="lede" style="margin: 0 auto 3rem;">Adicione a criolipólise no mesmo orçamento. Sem compromisso.</p>
+      <div class="bento-grid two-cols" style="max-width: 600px; width: 100%; margin-bottom: 3rem;">
+        <div class="img-frame"><img src="laysa-crio.jpg" alt="Crio" style="aspect-ratio: 1/1;"></div>
+        <div class="img-frame"><img src="laysa-hero.jpg" alt="Equipamento" style="aspect-ratio: 1/1;"></div>
+      </div>
+      <a href="#orcamento" class="pill-btn js-crio-cta">Adicionar ao orçamento</a>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--surface-alt);">
+  <div class="container center-text rv">
+    <span class="eyebrow">A Especialista</span>
+    <h2 class="subhead">LV Estética.</h2>
+    <p class="lede" style="max-width: 60ch;">A operação é conduzida por Laysa Ventura. Equipamento entregue e configurado por quem atende na área e entende perfeitamente a rotina de uma clínica.</p>
+  </div>
+</section>
+
 <section class="faq">
-  <div class="wrap">
-    <h2>Perguntas frequentes</h2>
-    <details><summary>Como funciona a locação?</summary><p>Você escolhe o pacote de horas, a gente combina a data, entrega o aparelho montado na sua cidade e busca quando o período terminar. Simples assim.</p></details>
-    <details><summary>Por quanto tempo posso alugar?</summary><p>Trabalho com pacotes de 6, 8 ou 12 horas de uso. Se você ainda não sabe quanto vai precisar, marca “ainda não sei” no formulário que eu te ajudo a definir.</p></details>
-    <details><summary>Vocês entregam onde?</summary><p>Nova Andradina, Dourados e região. Me passa sua cidade no formulário que eu confirmo a entrega.</p></details>
-    <details><summary>Preciso saber operar o aparelho?</summary><p>A entrega já vem com orientação de uso pra você atender com segurança, mesmo que seja a primeira vez com esse equipamento.</p></details>
-    <details><summary>E se acontecer algum problema durante a locação?</summary><p>Você tem suporte durante todo o período. Qualquer coisa, é só chamar no WhatsApp que a gente resolve.</p></details>
-    <details><summary>Dá pra incluir a Crio?</summary><p>Dá. Marca a opção no formulário que eu mando o orçamento da depilação a LED já com o módulo de resfriamento junto.</p></details>
+  <div class="container" style="max-width: 800px;">
+    <div class="center-text rv">
+      <span class="eyebrow">Dúvidas</span>
+      <h2 class="subhead">Perguntas frequentes.</h2>
+    </div>
+    <div class="rv">
+      <details>
+        <summary>Como funciona a locação?</summary>
+        <p>Você escolhe o pacote de horas. Entregamos e montamos na sua cidade. Buscamos ao fim do período.</p>
+      </details>
+      <details>
+        <summary>Qual a duração dos pacotes?</summary>
+        <p>Trabalhamos com opções precisas de 6, 8 ou 12 horas. Defina a sua necessidade no formulário.</p>
+      </details>
+      <details>
+        <summary>Preciso saber operar o aparelho?</summary>
+        <p>A entrega inclui orientação técnica completa para você atender suas clientes com total segurança.</p>
+      </details>
+      <details>
+        <summary>Como o equipamento é reservado?</summary>
+        <p>O bloqueio da data é feito com um caução de R$ 200 via Pix. O restante é acertado no dia da retirada.</p>
+      </details>
+    </div>
   </div>
 </section>
 
-<!-- FORM / ORCAMENTO -->
-<section class="form-section" id="orcamento">
-  <div class="wrap-narrow">
-    <div class="text-center-block rv">
-      <span class="eyebrow">Orçamento</span>
-      <h2>Me chama que eu monto o seu.</h2>
-      <p class="lede">Preenche aqui e eu te respondo no WhatsApp com o valor fechado.</p>
+<span id="orcamento" style="display:block; height:1px; visibility:hidden;"></span>
+
+<section style="background: var(--bg-base);">
+  <div class="container">
+    <div class="center-text rv">
+      <span class="eyebrow">Contato</span>
+      <h2 class="subhead">Monte o seu pacote.</h2>
+      <p class="lede">Retorno rápido e direto no WhatsApp.</p>
     </div>
 
-    <form class="form-wrap rv" id="leadForm" novalidate style="transition-delay:.1s">
+    <form class="form-wrap rv" id="leadForm" novalidate style="transition-delay: 0.1s;">
+      
       <div class="field">
-        <input type="text" id="cidade" name="cidade" class="apple-input" required aria-label="Cidade de atendimento" autocomplete="address-level2" placeholder="Cidade de atendimento">
+        <input type="text" id="cidade" name="cidade" class="apple-input" required autocomplete="address-level2" placeholder="Cidade de atendimento">
       </div>
 
       <div class="field">
-        <span class="field-label">Pacote de horas</span>
-        <div class="pill-select" role="group" aria-label="Pacote de horas">
-          <button type="button" class="pill-opt" data-value="6h">6 horas</button>
-          <button type="button" class="pill-opt" data-value="8h">8 horas</button>
-          <button type="button" class="pill-opt" data-value="12h">12 horas</button>
-          <button type="button" class="pill-opt" data-value="indefinido">Ainda não sei</button>
-        </div>
-        <input type="hidden" id="pacote" name="pacote" value="">
+        <select id="pacote" name="pacote" class="apple-input" style="cursor: pointer; appearance: none;">
+          <option value="" disabled selected>Escolha as horas</option>
+          <option value="6h">6 horas</option>
+          <option value="8h">8 horas</option>
+          <option value="12h">12 horas</option>
+          <option value="indefinido">Ainda não sei</option>
+        </select>
       </div>
 
-      <div class="form-grid two">
-        <div class="field">
-          <input type="text" id="nome" name="nome" class="apple-input" required aria-label="Seu nome" autocomplete="name" placeholder="Seu nome">
-        </div>
-        <div class="field">
-          <input type="tel" id="whatsapp" name="whatsapp" class="apple-input" required aria-label="Seu WhatsApp" autocomplete="tel" placeholder="WhatsApp">
-        </div>
+      <div class="field">
+        <input type="text" id="nome" name="nome" class="apple-input" required autocomplete="name" placeholder="Seu nome">
+      </div>
+      
+      <div class="field">
+        <input type="tel" id="whatsapp" name="whatsapp" class="apple-input" required autocomplete="tel" inputmode="tel" placeholder="Seu WhatsApp">
       </div>
 
       <label class="checkbox-item">
         <input type="checkbox" id="interesseCrio" name="interesseCrio">
-        <span class="checkbox-label">
-          Adicionar módulo de resfriamento (Crio)
+        <div class="checkbox-label">
+          Adicionar Criolipólise
           <small>Orçamento unificado. Sem compromisso.</small>
-        </span>
+        </div>
       </label>
 
-      <button type="submit" class="pill-btn cta" id="submitBtn" style="width:100%;padding:20px"><span class="lbl"><span class="lbl-text">Quero meu orçamento</span></span><span class="arrow" aria-hidden="true">&rarr;</span></button>
+      <button type="submit" class="pill-btn" style="width: 100%; font-size: 1.15rem; padding: 24px;" id="submitBtn">Enviar Solicitação</button>
       <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
 
-<footer class="site">
-  <div class="wrap">
+<footer>
+  <div class="container">
     <div class="footer-brand">LV Locações</div>
-    <p>Locação de depilação a LED · Nova Andradina e Dourados</p>
-    <div class="footer-bottom">© 2026 LV Estética Personalizada LTDA · <a href="privacidade.html">Política de Privacidade</a></div>
+    <p style="font-size: 1rem; color: #D1CFCA;">Equipamentos de Alta Performance · MS</p>
+    <div class="footer-bottom">
+      <span>© 2026 LV Estética Personalizada LTDA · Privacidade</span>
+    </div>
   </div>
 </footer>
 
-<a href="#orcamento" class="floating-cta" id="floatingCta" aria-label="Quero meu orçamento">
-  <span class="lbl-text">Quero meu orçamento</span><span class="arrow" aria-hidden="true">&rarr;</span>
-</a>
+<a href="#orcamento" class="floating-cta" id="floatingCta" aria-label="Solicitar orçamento">Solicitar orçamento <span aria-hidden="true">&rarr;</span></a>
 
 <script>
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzBREjTd7P0dj9nR7p8zVqahzQOoZKy3r6cGqeEj_l9zhl_KmkSqNYIyb03bZlJycw/exec';
-  // >>> FALTA PREENCHER: WhatsApp REAL da Laysa (55 + DDD + numero, sem espacos). Enquanto for 'XXXX', o link nao funciona — proposital. <<<
-  const WHATSAPP_NUMBER = '55XXXXXXXXXXX';
+  const WHATSAPP_NUMBER = '55XXXXXXXXXXX'; // >>> COLOQUE O NUMERO REAL DA LAYSA (55 + DDD + numero, sem espacos) <<<
 
-  const form = document.getElementById('leadForm');
-  const btn  = document.getElementById('submitBtn');
-  const btnText = btn.querySelector('.lbl-text');
-  const msg  = document.getElementById('formMsg');
-
-  function showMsg(type, text){ msg.textContent = text; msg.className = 'form-msg ' + type; }
-
-  // Pacote em pills
-  document.querySelectorAll('.pill-opt').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('.pill-opt').forEach(function(x){ x.classList.remove('active'); });
-      b.classList.add('active');
-      document.getElementById('pacote').value = b.dataset.value;
+  // Reveal suave ao rolar
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
     });
-  });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
 
-  // Link da Crio marca o checkbox e leva ao form
-  document.querySelectorAll('.js-crio-cta').forEach(function(el){
-    el.addEventListener('click', function(){
+  // Link da Crio: marca o checkbox antes de levar pro formulario
+  document.querySelectorAll('.js-crio-cta').forEach(function (el) {
+    el.addEventListener('click', function () {
       var cb = document.getElementById('interesseCrio');
       if (cb) cb.checked = true;
-      document.getElementById('orcamento').scrollIntoView({behavior:'smooth'});
     });
   });
 
-  form.addEventListener('submit', function(e){
+  // CTA flutuante: aparece ao rolar, some no hero e no formulario
+  (function () {
+    var fc = document.getElementById('floatingCta');
+    if (!fc || !('IntersectionObserver' in window)) return;
+    var hero = document.querySelector('.hero');
+    var formEl = document.getElementById('leadForm');
+    var heroVis = true, formVis = false;
+    function upd() { fc.classList.toggle('show', !(heroVis || formVis)); }
+    var ob = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        if (en.target === hero) heroVis = en.isIntersecting;
+        if (en.target === formEl) formVis = en.isIntersecting;
+      });
+      upd();
+    }, { threshold: 0.01 });
+    if (hero) ob.observe(hero);
+    if (formEl) ob.observe(formEl);
+  })();
+
+  // Formulario
+  var form = document.getElementById('leadForm');
+  var btn  = document.getElementById('submitBtn');
+  var msg  = document.getElementById('formMsg');
+  function showMsg(type, text) { if (msg) { msg.textContent = text; msg.className = 'form-msg ' + type; } }
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    var obrigatorios = ['cidade','nome','whatsapp'];
-    for (var i=0;i<obrigatorios.length;i++){
-      if (!form.elements[obrigatorios[i]].value.trim()){
-        showMsg('error','Preencha cidade, nome e WhatsApp pra eu enviar.');
-        form.elements[obrigatorios[i]].focus();
+    var required = ['cidade', 'pacote', 'nome', 'whatsapp'];
+    for (var i = 0; i < required.length; i++) {
+      if (!form.elements[required[i]].value.trim()) {
+        showMsg('error', 'Preencha cidade, horas, nome e WhatsApp.');
+        form.elements[required[i]].focus();
         return;
       }
     }
 
     btn.disabled = true;
-    btnText.textContent = 'Abrindo WhatsApp...';
+    var oldLabel = btn.textContent;
+    btn.textContent = 'Abrindo WhatsApp...';
 
     var interesseCrio = form.elements.interesseCrio.checked;
     var data = {
       nome:        form.elements.nome.value.trim(),
       whatsapp:    form.elements.whatsapp.value.trim(),
       cidade:      form.elements.cidade.value.trim(),
-      equipamento: interesseCrio ? 'LED + Crio (interesse)' : 'LED',
+      equipamento: interesseCrio ? 'LED + Criolipólise (interesse)' : 'LED',
       pacote:      form.elements.pacote.value || '',
       origem:      document.referrer || 'direto',
       ts:          new Date().toISOString()
     };
 
-    var linhaCrio = interesseCrio ? '\nTambém tenho interesse na Crio.' : '';
+    var linhaCrio = interesseCrio ? '\nTambém quero a Criolipólise.' : '';
     var texto = encodeURIComponent(
-      'Olá! Vim pela página de locação e quero meu orçamento.\n\n' +
+      'Olá, Laysa! Vim pela página e quero meu orçamento.\n\n' +
       'Nome: ' + data.nome + '\n' +
       'WhatsApp: ' + data.whatsapp + '\n' +
       'Cidade: ' + data.cidade + '\n' +
@@ -425,55 +538,24 @@
 
     // 1) salva o lead na planilha
     fetch(APPS_SCRIPT_URL, {
-      method:'POST', mode:'no-cors',
-      headers:{ 'Content-Type':'text/plain;charset=utf-8' },
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(data)
-    }).catch(function(err){ console.error('Erro ao salvar lead na planilha:', err); });
+    }).catch(function (err) { console.error('Erro ao salvar lead na planilha:', err); });
 
-    // 2) abre o WhatsApp (com fallback se o popup for bloqueado)
-    var win = window.open(whatsappUrl,'_blank');
-    if (!win || win.closed || typeof win.closed === 'undefined'){
-      msg.innerHTML = 'Toque aqui pra abrir o WhatsApp: <a href="' + whatsappUrl + '" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Continuar no WhatsApp &rarr;</a>';
+    // 2) abre o WhatsApp (com fallback se o popup for bloqueado no celular)
+    var win = window.open(whatsappUrl, '_blank');
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+      msg.innerHTML = 'Toque aqui pra abrir o WhatsApp: <a href="' + whatsappUrl + '" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">Continuar &rarr;</a>';
       msg.className = 'form-msg success';
     } else {
-      showMsg('success','Pronto. Te redirecionei pro WhatsApp pra fechar o orçamento.');
+      showMsg('success', 'Pronto! Te levei pro WhatsApp pra fechar o orçamento.');
       form.reset();
-      document.querySelectorAll('.pill-opt').forEach(function(x){ x.classList.remove('active'); });
-      document.getElementById('pacote').value = '';
     }
 
     btn.disabled = false;
-    btnText.textContent = 'Quero meu orçamento';
+    btn.textContent = oldLabel;
   });
-
-  // Reveal on scroll
-  (function(){
-    var els = document.querySelectorAll('.rv');
-    if (!('IntersectionObserver' in window)){ els.forEach(function(el){ el.classList.add('in'); }); return; }
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-    }, { threshold:.12 });
-    els.forEach(function(el){ io.observe(el); });
-  })();
-
-  // CTA flutuante: aparece ao rolar; some no Hero e no formulario
-  (function(){
-    var fc = document.getElementById('floatingCta');
-    if (!fc || !('IntersectionObserver' in window)) return;
-    var hero = document.querySelector('.hero');
-    var formSec = document.getElementById('orcamento');
-    var heroVis = true, formVis = false;
-    function upd(){ fc.classList.toggle('show', !(heroVis || formVis)); }
-    var ob = new IntersectionObserver(function(ents){
-      ents.forEach(function(en){
-        if (en.target === hero) heroVis = en.isIntersecting;
-        if (en.target === formSec) formVis = en.isIntersecting;
-      });
-      upd();
-    }, { threshold:.01 });
-    if (hero) ob.observe(hero);
-    if (formSec) ob.observe(formSec);
-  })();
 </script>
 
 </body>
